@@ -10,7 +10,7 @@ const Twitter = new twit({
 
 const sendTweet = async (activity, count) => {
 	const trackUri = (activity.track_uri.split(':'))[2];
-	const message = `${activity.member.name} is currently listening to ${activity.track} by ${activity.artist} (count: ${count}) https://open.spotify.com/track/${trackUri}`;
+	const message = `${activity.member.name} is currently listening to ${activity.track} by ${activity.artist} #${count} https://open.spotify.com/track/${trackUri}`;
 	console.log(message);
 
 	const post = await Twitter.post('statuses/update', {
