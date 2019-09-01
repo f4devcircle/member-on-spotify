@@ -1,0 +1,4 @@
+.env
+spotify-auth.json
+gcp.json
+node_modules
