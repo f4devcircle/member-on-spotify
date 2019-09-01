@@ -6,9 +6,9 @@ const { sendTweet } = require('./modules/twitter');
 
 const getNowPlaying = async () => {
 	console.log(`get spotify's now playing`);
-	// const activities = await getActivities();
+	const activities = await getActivities();
 
-	// await activityRepository.upsertActivities(activities);
+	await upsertActivities(activities);
 };
 
 const publishToTwitter = async () => {
